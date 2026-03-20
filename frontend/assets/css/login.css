@@ -22,3 +22,63 @@ body{
     border-radius: 20px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
+
+/* - Conteiner Central*/
+.login-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* - Estilos dos Títulos*/
+.login-box h2{
+    margin-bottom: 25px;
+    color: #2b3f36;
+}
+
+/* - Estilo do Texto*/
+.login-box p{
+    margin-bottom: 25px;
+    color: #2b3f36;
+}
+
+/* - Estilo dos campos de entrada*/
+.login-box input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s; /* Transição suave para foco */
+
+}
+
+/* - Efeito de foco nos campos de entrada*/
+.login-box input:focus{
+    border-color:#2c4434;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(44, 68, 52, 0.5);
+}
+
+/* - Estilo do botão de login*/
+.login-box button{
+    width: 100%;
+    padding: 12px;
+    color:#e4e1d0;
+    background-color: #2c4434;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 100%;
+}
+
+.login-box button:hover{
+    background-color: #2b3f36;
+    opacity: 180%;
+    box-shadow: 0px 0px 15px rgba(44, 68, 52, 0.5);
+    font-size: 17px;
+}
