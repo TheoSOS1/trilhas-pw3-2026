@@ -7,6 +7,20 @@ async function login() {
   console.log("Email:", email);
   console.log("Password:", password);
 
+  // testando se os campos estão vazios
+  if(!email && !password){
+    alert("Campos e-mail e senha são obrigatórios");
+    return;
+  }
+  if(!email){
+    alert("Campo de e-mail obrigatório.");
+    return;
+  }
+  if(!password){
+    alert("Campo senha obrigatório.");
+    return;
+  }
+
   const response = await fetch("http://localhost:3000/api/login/login", {
     method: "POST",
     headers: {
