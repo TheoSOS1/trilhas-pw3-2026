@@ -6,7 +6,12 @@ exports.login = (req, res) => {
   // Removi o async pois você está usando callback
   const { email, password } = req.body;
 
-  userModel.findByEmail(email, (user) => {
+  userModel.findByEmail(email, (err, user) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ message: "Erro ao consultar usuário" });
+    }
+
     // 1. Verificamos se o usuário existe e a senha bate
     if (!user || user.password !== password) {
       return res.status(401).json({

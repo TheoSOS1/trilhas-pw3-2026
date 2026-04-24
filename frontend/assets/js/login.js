@@ -8,15 +8,15 @@ async function login() {
   console.log("Password:", password);
 
   // testando se os campos estão vazios
-  if(!email && !password){
+  if (!email && !password) {
     alert("Campos e-mail e senha são obrigatórios");
     return;
   }
-  if(!email){
+  if (!email) {
     alert("Campo de e-mail obrigatório.");
     return;
   }
-  if(!password){
+  if (!password) {
     alert("Campo senha obrigatório.");
     return;
   }
@@ -40,7 +40,9 @@ async function login() {
     } else {
       window.location.href = "dashboard-cli.html";
     }
+  } else if (response.status === 401) {
+    alert(data.message);
   } else {
-    alert("Erro no login", + data.message);
+    alert("Erro no login", +data.message);
   }
 }

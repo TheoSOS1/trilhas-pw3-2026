@@ -1,8 +1,9 @@
-const express = require('express');
+const express = require("express");
 
-const cors = require('cors');
+const cors = require("cors");
 
-const loginRoutes = require('./src/routes/loginRoutes');
+const loginRoutes = require("./src/routes/loginRoutes");
+const registerRoutes = require("./src/routes/registerRoutes");
 
 const app = express();
 
@@ -13,9 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 // - Routes
-app.use('/api/login', loginRoutes);
+app.use("/api/login", loginRoutes);
+app.use("/api/register", registerRoutes);
 
 // - Start do servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`)
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
